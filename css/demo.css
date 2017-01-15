@@ -159,7 +159,7 @@ button:focus {
 	cursor: default;
 }
 .header-link-container.download-container .info {
-	width: 360px;
+	width: 380px;
 }
 .header-link-container:hover .info {
 	display: block;
