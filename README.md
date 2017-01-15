@@ -1,11 +1,11 @@
 # js-ripple-click
 A JavaScript utility for Ripple effect on click on different HTML elements.
 
-##How to use viral-ripple.js
+##How to use viral-ripple-click.js
 * Download latest js-ripple-click - JavaScript utility.
   * [The compressed, production viral-ripple-click-1.0.0](https://raw.githubusercontent.com/virallalakia/js-ripple-click/master/dist/js/viral-ripple-click-1.0.0.min.js)
   * [The uncompressed, development viral-ripple-click-1.0.0](https://raw.githubusercontent.com/virallalakia/js-ripple-click/master/dist/js/viral-ripple-click-1.0.0.js)
-* viral-ripple.js provides 3 utility functions:
+* viral-ripple-click.js provides 3 utility functions:
   * `viralRippleClick.options()` - utility function to get/set options for ripple effect on click on HTML elements
   * `viralRippleClick.disable()` - utility function to disable ripple effect on click on HTML elements, this PRESERVEs all options
   * `viralRippleClick.enable()` - utility function to enable ripple effect on click on HTML elements, this PRESERVEs all options
