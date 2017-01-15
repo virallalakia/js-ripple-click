@@ -11,11 +11,11 @@ A JavaScript utility for Ripple effect on click on different HTML elements.
   * `viralRippleClick.enable()` - utility function to enable ripple effect on click on HTML elements, this PRESERVEs all options
 
 ##Options
-* `elemSelector`: CSS selector of the elements on which ripple click effect to be displayed (default value: 'button')
-* `color`: color to be used for ripple click effect (default value: '#FFFFFF')
-* `opacityStart`: opacity to be used when ripple click effect starts (default value: '0.4')
-* `opacityEnd`: opacity to be used when ripple click effect ends (default value: '0')
-* `transitionType`: transition timing function to be used for ripple click effect (default value: 'ease-in-out')
+* `elemSelector`: CSS selector of the elements on which ripple click effect to be displayed (default value: `'button'`)
+* `color`: color to be used for ripple click effect (default value: `'#FFFFFF'`)
+* `opacityStart`: opacity to be used when ripple click effect starts (default value: `'0.4'`)
+* `opacityEnd`: opacity to be used when ripple click effect ends (default value: `'0'`)
+* `transitionType`: transition timing function to be used for ripple click effect (default value: `'ease-in-out'`)
 
 ##Utility functions (Syntax and Usage)
 1. **options** - utility function to get/set options for ripple effect on click on HTML elements
@@ -27,6 +27,14 @@ A JavaScript utility for Ripple effect on click on different HTML elements.
 		// get options for ripple effect
 		// example:
 		var rippleEffectOptions = viralRippleClick.options();
+		// sample returned options obect:
+		{
+			'elemSelector': 'button',
+			'color': '#FFFFFF',
+			'opacityStart': '0.4',
+			'opacityEnd': '0',
+			'transitionType': 'ease-in-out'
+		}
 		```
 
 	* set options
