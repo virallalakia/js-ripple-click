@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title>RippleClick.js - a ViralProject piece</title>
+	<meta name="keywords" content="RippleClick.js, click, ripple, RippleClick, ripple effect, JavaScript, ViralProject, ViralProjects, Viral, Lalakia, Viral Lalakia" />
+	<meta name="description" content="An easy to use JavaScript utility for Ripple effect on click on different HTML elements with JavaScript, this page shows demo for the usage of RippleClick.js - Viral RippleClick.js - a ViralProject piece" />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="Viral Lalakia" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+</head>
+<body>
+	<div class="header-container outer-container">
+		<div class="logo-text">
+			<div class="logo-main-text">RippleClick.js</div>
+			<div class="logo-sub-text">a <span class="spe-text">Viral</span>Project piece</div>
+		</div>
+		<div class="about-container header-link-container">
+			<div class="link">About</div>
+			<div class="info">
+				<div class="info-arrow">
+					<div class="info-arrow-leftpart"></div>
+					<div class="info-arrow-rightpart"></div>
+				</div>
+				<div class="info-text">
+					An easy to use JavaScript utility for Ripple effect on click on different HTML elements with JavaScript, this page shows demo for the usage of RippleClick.js.
+					<div style="text-align: right;">- a <a target="_blank" href="https://virallalakia.github.io/" title="ViralProject on Github"><b>Viral</b>Project</a> piece</div>
+					<div style="text-align: right;">(by Viral Lalakia)</div>
+				</div>
+			</div>
+		</div>
+		<div class="download-container header-link-container">
+			<div class="link">Download</div>
+			<div class="info">
+				<div class="info-arrow">
+					<div class="info-arrow-leftpart"></div>
+					<div class="info-arrow-rightpart"></div>
+				</div>
+				<div class="info-text">
+					Download latest stable version:
+					<div style="text-align: right;">
+						<a target="_blank" href="https://raw.githubusercontent.com/virallalakia/js-ripple-click/master/dist/js/viral-ripple-click-1.0.0.min.js">The compressed, production viral-ripple-click-1.0.0</a>
+						<br/>
+						<a target="_blank" href="https://raw.githubusercontent.com/virallalakia/js-ripple-click/master/dist/js/viral-ripple-click-1.0.0.js">The uncompressed, development viral-ripple-click-1.0.0</a>
+						<br/>
+						<a target="_blank" href="https://raw.githubusercontent.com/virallalakia/js-ripple-click/master/dist/js/viral-ripple-click-1.0.0.min.map">The map file for viral-ripple-click-1.0.0</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="docs-container header-link-container">
+			<div class="link"><a target="_blank" href="https://github.com/virallalakia/js-ripple-click/#js-ripple-click">Docs</a></div>
+		</div>
+		<div class="project-on-github-container header-link-container">
+			<div class="link"><a target="_blank" href="https://github.com/virallalakia/js-ripple-click/">Project on GitHub</a></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="main-container outer-container">
+		<div class="main-header-container">Demo Page</div>
+		<div class="demo-action-container">
+			<label for="elemSelector">Elements Selector: </label>
+			<input id="elemSelector" name="elemSelector" type="text" value="button, span, li" />
+			<label for="color" title="should be in any CSS color format">Color: </label>
+			<input id="color" name="color" type="text" title="should be in any CSS color format" value="#FF0000" />
+			<label for="transitionType" title="should be one of these values: 'linear' OR 'ease' OR 'ease-in' OR 'ease-out' OR 'ease-in-out' OR 'cubic-bezier(n,n,n,n)'">Animation Type: </label>
+			<input id="transitionType" name="transitionType" type="text" title="should be one of these values: 'linear' OR 'ease' OR 'ease-in' OR 'ease-out' OR 'ease-in-out' OR 'cubic-bezier(n,n,n,n)'" value="linear" />
+			<br/>
+			<label for="opacityStart" title="should be in range 0 to 1">Start Opacity: </label>
+			<input id="opacityStart" name="opacityStart" type="text" title="should be in range 0 to 1" value="0.4" />
+			<label for="opacityEnd" title="should be in range 0 to 1">End Opacity: </label>
+			<input id="opacityEnd" name="opacityEnd" type="text" title="should be in range 0 to 1" value="0" />
+			<br/>
+			<button id="button-options">Set above options</button>
+			<br/>
+			<button id="button-enable">Enable Ripple Click Effect</button>
+			<button id="button-disable">Disable Ripple Click Effect</button>
+		</div>
+		<br/><hr/>
+		<h1>Demo Elements</h1>
+		<div class="demo-elements-container">
+			<div class="demo-buttons-container">
+				<button id="demo-button-1" class="demo-button">button#demo-button-1.demo-button</button>
+				<button id="demo-button-2" class="demo-button">button#demo-button-2.demo-button</button>
+				<button class="demo-button">button.demo-button</button>
+			</div>
+			<div class="demo-spans-container">
+				<span id="demo-span-1" class="demo-span">span#demo-span-1.demo-span</span>
+				<span id="demo-span-2" class="demo-span">span#demo-span-2.demo-span</span>
+				<span class="demo-span">span.demo-span</span>
+			</div>
+			<div class="demo-lis-container">
+				<ul id="demo-ul" class="demo-list">
+					<li id="demo-ul-li-1" class="demo-ul-li">ul List Item 1 (ul#demo-ul.demo-list li#demo-ul-li-1.demo-ul-li)</li>
+					<li id="demo-ul-li-2" class="demo-ul-li">ul List Item 2 (ul#demo-ul.demo-list li#demo-ul-li-2.demo-ul-li)</li>
+					<li id="demo-ul-li-3" class="demo-ul-li">ul List Item 3 (ul#demo-ul.demo-list li#demo-ul-li-3.demo-ul-li)</li>
+					<li id="demo-ul-li-4" class="demo-ul-li">ul List Item 4 (ul#demo-ul.demo-list li#demo-ul-li-4.demo-ul-li)</li>
+				</ul>
+				<ol id="demo-ol" class="demo-list">
+					<li id="demo-ol-li-1" class="demo-ol-li">ol List Item 1 (ol#demo-ol.demo-list li#demo-ol-li-1.demo-ol-li)</li>
+					<li id="demo-ol-li-2" class="demo-ol-li">ol List Item 2 (ol#demo-ol.demo-list li#demo-ol-li-2.demo-ol-li)</li>
+					<li id="demo-ol-li-3" class="demo-ol-li">ol List Item 3 (ol#demo-ol.demo-list li#demo-ol-li-3.demo-ol-li)</li>
+					<li id="demo-ol-li-4" class="demo-ol-li">ol List Item 4 (ol#demo-ol.demo-list li#demo-ol-li-4.demo-ol-li)</li>
+					<li id="demo-ol-li-5" class="demo-ol-li">ol List Item 5 (ol#demo-ol.demo-list li#demo-ol-li-5.demo-ol-li)</li>
+				</ol>
+			</div>
+		</div>
+		<br/><br/>
+	</div>
+
+	<div class="virallalakia-container">
+		<div class="word">
+			<div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-dot"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-space"></div>
+		</div>
+		<div class="word">
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dash"></div><div class="morsepiece-dot"></div><div class="morsepiece-dash"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dot"></div><div class="morsepiece-space"></div>
+			<div class="morsepiece-dot"></div><div class="morsepiece-dash"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="dist/js/viral-ripple-click-1.0.0.min.js"></script>
+	<script type="text/javascript" src="js/demo.js"></script>
+</body>
+</html>
