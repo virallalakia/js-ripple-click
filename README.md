@@ -50,7 +50,7 @@ A JavaScript utility for Ripple effect on click on different HTML elements.
 			'opacityEnd': 0.2,
 			'transitionType': 'linear'
 		});
-		// example: set only 'color' and 'transitionType'
+		// example: set only 'color' and 'transitionType' options
 		viralRippleClick.options({
 			'color': '#252525',
 			'transitionType': 'ease-in'
