@@ -353,7 +353,8 @@ var viralRippleClick = (function ($V) {
 			'left': '0',
 			'width': '0px',
 			'height': '0px',
-			'overflow': 'hidden'
+			'overflow': 'hidden',
+			'pointer-events': 'none'
 		});
 		$V.css($viralRipple, {
 			'position': 'absolute',
@@ -364,7 +365,8 @@ var viralRippleClick = (function ($V) {
 			'border-radius': '50%',
 			'background': _options['color'],
 			'opacity': _options['opacityEnd'],
-			'transform': 'scale(0)'
+			'transform': 'scale(0)',
+			'pointer-events': 'none'
 		});
 
 		timeoutHandler();

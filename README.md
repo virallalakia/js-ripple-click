@@ -27,7 +27,7 @@ A JavaScript utility for Ripple effect on click on different HTML elements.
 		// get options for ripple effect
 		// example:
 		var rippleEffectOptions = viralRippleClick.options();
-		// sample returned options obect:
+		// sample returned options object:
 		{
 			'elemSelector': 'button',
 			'color': '#FFFFFF',
