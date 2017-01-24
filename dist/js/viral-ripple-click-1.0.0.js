@@ -218,7 +218,7 @@ var viralJsUtils = viralJsUtils || {};
 		if ($el.classList) {
 			return ($el.classList.contains(className));
 		} else {
-			return (new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className));
+			return (new RegExp('(^| )' + className + '( |$)', 'gi').test($el.className));
 		}
 	};
 	$V['toggleClass'] = function($el, className) {
@@ -288,7 +288,7 @@ var viralJsUtils = viralJsUtils || {};
 	$V['trigger'] = function(eventName) {
 		var event = document.createEvent('HTMLEvents');
 		event.initEvent(eventName, true, false);
-		el.dispatchEvent(event);
+		$el.dispatchEvent(event);
 	};
 	$V['triggerCustom'] = function(eventName, eventData) {
 		if(CustomEvent) {
@@ -299,7 +299,7 @@ var viralJsUtils = viralJsUtils || {};
 			var event = document.createEvent('CustomEvent');
 			event.initCustomEvent(eventName, true, true, eventData);
 		}
-		el.dispatchEvent(event);
+		$el.dispatchEvent(event);
 	};
 })(viralJsUtils);
 
@@ -320,8 +320,8 @@ var viralRippleClick = (function ($V) {
 	var _$viralRipple;
 
 	var timeoutHandler = function() {
-		$V.css($viralRippleCont, {'width': 0, 'height': 0, 'left': 0, 'top': 0});
-		$V.css($viralRipple, {'transition': 'none', 'opacity': _options['opacityStart'], 'transform': 'scale(0)'});
+		$V.css(_$viralRippleCont, {'width': 0, 'height': 0, 'left': 0, 'top': 0});
+		$V.css(_$viralRipple, {'transition': 'none', 'opacity': _options['opacityStart'], 'transform': 'scale(0)'});
 	};
 
 	var documentClickHandler = function(e) {
@@ -336,18 +336,18 @@ var viralRippleClick = (function ($V) {
 		var scale = 2.5 * (targetTotalWidth >= targetTotalHeight ? targetTotalWidth : targetTotalHeight); 
 		var delay = (scale > 400 ? (scale <= 800 ? scale : 800) : 400);
 
-		$V.css($viralRippleCont, {'width': targetTotalWidth, 'height': targetTotalHeight, 'left': targetOffset.left, 'top': targetOffset.top});
-		$V.css($viralRipple, {'transition': 'opacity 0.5s ' + _options['transitionType'] + ' 0s, transform 0.5s ' + _options['transitionType'] + ' 0s', 'left': e.pageX - targetOffset.left, 'top': e.pageY - targetOffset.top, 'opacity': _options['opacityEnd'], 'transform': 'scale(' + scale + ')'});
+		$V.css(_$viralRippleCont, {'width': targetTotalWidth, 'height': targetTotalHeight, 'left': targetOffset.left, 'top': targetOffset.top});
+		$V.css(_$viralRipple, {'transition': 'opacity 0.5s ' + _options['transitionType'] + ' 0s, transform 0.5s ' + _options['transitionType'] + ' 0s', 'left': e.pageX - targetOffset.left, 'top': e.pageY - targetOffset.top, 'opacity': _options['opacityEnd'], 'transform': 'scale(' + scale + ')'});
 		setTimeout(timeoutHandler, delay);
 	};
 
 	var init = function(reinitFlag) {
 		if (reinitFlag !== true) {
 			$V.append($V.select('body')[0], $V.parseHTML('<div class="viral-ripple-cont"><div class="viral-ripple"></div></div>')[0]);
-			$viralRippleCont = $V.select('.viral-ripple-cont')[0];
-			$viralRipple = $V.find($viralRippleCont, '.viral-ripple')[0];
+			_$viralRippleCont = $V.select('.viral-ripple-cont')[0];
+			_$viralRipple = $V.find(_$viralRippleCont, '.viral-ripple')[0];
 		}
-		$V.css($viralRippleCont, {
+		$V.css(_$viralRippleCont, {
 			'position': 'absolute',
 			'top': '0',
 			'left': '0',
@@ -356,7 +356,7 @@ var viralRippleClick = (function ($V) {
 			'overflow': 'hidden',
 			'pointer-events': 'none'
 		});
-		$V.css($viralRipple, {
+		$V.css(_$viralRipple, {
 			'position': 'absolute',
 			'top': '0',
 			'left': '0',
