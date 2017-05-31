@@ -320,7 +320,7 @@ var viralRippleClick = (function ($V) {
 	var _$viralRipple;
 
 	var timeoutHandler = function() {
-		$V.css(_$viralRippleCont, {'width': 0, 'height': 0, 'left': 0, 'top': 0});
+		$V.css(_$viralRippleCont, {'width': 0, 'height': 0, 'left': 0, 'top': 0, 'border-radius': 0});
 		$V.css(_$viralRipple, {'transition': 'none', 'opacity': _options['opacityStart'], 'transform': 'scale(0)'});
 	};
 
@@ -333,10 +333,11 @@ var viralRippleClick = (function ($V) {
 		var targetOffset = $V.offset($target);
 		var targetTotalWidth = $V.outerWidth($target);
 		var targetTotalHeight = $V.outerHeight($target);
-		var scale = 2.5 * (targetTotalWidth >= targetTotalHeight ? targetTotalWidth : targetTotalHeight); 
+		var targetBorderRadius = $V.css($target, 'border-top-left-radius') + " " + $V.css($target, 'border-top-right-radius') + " " + $V.css($target, 'border-bottom-right-radius') + " " + $V.css($target, 'border-bottom-left-radius');
+		var scale = 2.5 * (targetTotalWidth >= targetTotalHeight ? targetTotalWidth : targetTotalHeight);
 		var delay = (scale > 400 ? (scale <= 800 ? scale : 800) : 400);
 
-		$V.css(_$viralRippleCont, {'width': targetTotalWidth, 'height': targetTotalHeight, 'left': targetOffset.left, 'top': targetOffset.top});
+		$V.css(_$viralRippleCont, {'width': targetTotalWidth, 'height': targetTotalHeight, 'left': targetOffset.left, 'top': targetOffset.top, 'border-radius': targetBorderRadius});
 		$V.css(_$viralRipple, {'transition': 'opacity 0.5s ' + _options['transitionType'] + ' 0s, transform 0.5s ' + _options['transitionType'] + ' 0s', 'left': e.pageX - targetOffset.left, 'top': e.pageY - targetOffset.top, 'opacity': _options['opacityEnd'], 'transform': 'scale(' + scale + ')'});
 		setTimeout(timeoutHandler, delay);
 	};

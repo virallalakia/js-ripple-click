@@ -236,6 +236,7 @@ button:focus {
 	margin: 10px;
 	font-size: 14px;
 	border: 1px solid #227744;
+	border-radius: 50% 0;
 	background: #449966;
 	color: #FFFFFF;
 	cursor: default;
