@@ -139,7 +139,7 @@ button:focus {
 }
 .header-link-container .link {
 	font-size: 12px;
-	font-family: consolas;
+	font-family: consolas, monospace;
 	text-decoration: underline;
 	cursor: pointer;
 }
